@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Token} from "./models/Token";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mementautofront';
+  // @ts-ignore
+  token: Token = JSON.parse(localStorage.getItem("loginResponse")) as Token;
+
 }
